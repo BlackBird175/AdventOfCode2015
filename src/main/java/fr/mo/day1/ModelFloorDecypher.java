@@ -2,12 +2,12 @@ package fr.mo.day1;
 
 public class ModelFloorDecypher {
 
-    private final Instructions instructions = new Instructions();
-    private final String instruction = instructions.getINSTRUCTIONS();
+    private final Instructions instructionsObj = new Instructions();
+    private final String instructionsStr = instructionsObj.getINSTRUCTIONS();
 
-    public int DecypherInstruction() {
+    public int decypherInstruction() {
 
-        String instructions = this.instruction;
+        String instructions = this.instructionsStr;
         int floor = 0;
 
         for (int i = 0; i < instructions.length(); i++) {
@@ -16,17 +16,13 @@ public class ModelFloorDecypher {
             }
             else
                 floor--;
-
-            if (floor == -1){
-                System.out.println(i+1);
-            }
         }
         return floor;
     }
 
     public int getFirstInstructionToBasementPosition() {
 
-        String instructions = this.instruction;
+        String instructions = this.instructionsStr;
         int floor = 0;
         int firstInstructionToBasement = 0;
 
