@@ -85,8 +85,31 @@ public class ModelFloorDecypher {
             }
             else
                 floor--;
+
+            if (floor == -1){
+                System.out.println(i+1);
+            }
         }
         return floor;
+    }
+
+    public int getFirstInstructionToBasementPosition(String instructions) {
+
+        int floor = 0;
+        int firstInstructionToBasement = 0;
+
+        for (int i = 0; i < instructions.length() && floor != -1; i++) {
+            if (instructions.charAt(i) == '(') {
+                floor++;
+            }
+            else
+                floor--;
+
+            if (floor == -1){
+                firstInstructionToBasement = i + 1;
+            }
+        }
+        return firstInstructionToBasement;
     }
 
     public String getINSTRUCTIONS() {
