@@ -7,11 +7,10 @@ public class ModelFloorDecypher {
 
     public int decypherInstruction() {
 
-        String instructions = this.instructionsStr;
         int floor = 0;
 
-        for (int i = 0; i < instructions.length(); i++) {
-            if (instructions.charAt(i) == '(') {
+        for (int i = 0; i < this.instructionsStr.length(); i++) {
+            if (this.instructionsStr.charAt(i) == '(') {
                 floor++;
             }
             else
@@ -22,12 +21,11 @@ public class ModelFloorDecypher {
 
     public int getFirstInstructionToBasementPosition() {
 
-        String instructions = this.instructionsStr;
         int floor = 0;
         int firstInstructionToBasement = 0;
 
-        for (int i = 0; i < instructions.length() && floor != -1; i++) {
-            if (instructions.charAt(i) == '(') {
+        for (int i = 0; i < this.instructionsStr.length() && floor != -1; i++) {
+            if (this.instructionsStr.charAt(i) == '(') {
                 floor++;
             }
             else
@@ -39,5 +37,6 @@ public class ModelFloorDecypher {
         }
         return firstInstructionToBasement;
     }
+
 
 }
