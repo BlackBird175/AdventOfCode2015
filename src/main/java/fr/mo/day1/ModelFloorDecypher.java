@@ -75,8 +75,8 @@ public class ModelFloorDecypher {
             "(())(((()((((()()((()(()(((((())()))()((((((()))((())(((()()))(((())(())()))(((((((())(())())()(())" +
             "(((((()))()((()))()(()()((()()()()()())(((((((";
 
-    public int DecypherFloor(String instructions) {
-
+    public int DecypherFloor() {
+        String instructions = this.INSTRUCTIONS;
         int floor = 0;
 
         for (int i = 0; i < instructions.length(); i++) {
@@ -93,8 +93,9 @@ public class ModelFloorDecypher {
         return floor;
     }
 
-    public int getFirstInstructionToBasementPosition(String instructions) {
+    public int getFirstInstructionToBasementPosition() {
 
+        String instructions = this.INSTRUCTIONS;
         int floor = 0;
         int firstInstructionToBasement = 0;
 
