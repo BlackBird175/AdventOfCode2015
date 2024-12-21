@@ -12,8 +12,7 @@ public class Model {
 
     public void readFile() throws IOException {
         //BufferedReader with file reader to read into the file
-        BufferedReader reader = new BufferedReader(new FileReader("/home/kandinsky/Documents/CodeExos" +
-                "/AdventOfCode2015/src/main/java/fr/mo/day2/operations.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("/src/main/java/fr/mo/day2/operations.txt"));
 
         int paperNeeded = 0;
         int ribbonNeeded = 0;
