@@ -9,6 +9,8 @@ import java.util.Map;
 
 public class Model {
 
+    //TODO : DESSINER LE CHEMIN PARCOURU PAR SANTA ET SON ROBOT
+
     private final Map<String, Integer> homes;
 
     private final String path1 = "/home/kandinsky/Documents/CodeExos" +
@@ -29,17 +31,15 @@ public class Model {
         Coordinates roboSantaCoordinates = new Coordinates(0, 0);
 
         for (int i = 0; i < line.getFirst().length(); i++) {
-
-            if (i % 2 != 0){
+            if (i % 2 != 0)
                 instructionBehaviour(line.getFirst().charAt(i), santaCoordinates);
-            }
-            instructionBehaviour(line.getFirst().charAt(i), roboSantaCoordinates);
+            else
+                instructionBehaviour(line.getFirst().charAt(i), roboSantaCoordinates);
         }
         System.out.println(homes.size());
     }
 
     public void instructionBehaviour (char instruction, Coordinates coordinates){
-
         switch (instruction) {
             case '^' -> coordinates.setX(coordinates.getX() + 1);
             case '>' -> coordinates.setY(coordinates.getY() + 1);
